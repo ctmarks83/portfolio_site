@@ -90,7 +90,7 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
@@ -116,9 +116,9 @@
       background: url(../dist/img/ChrisMarks_Headshot_Small.jpg);
       width: 150px;
       height: 150px; }
-  .about-info {
+  #about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: repeat(1, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -196,27 +196,22 @@ main {
   grid-gap: 30px;
   grid-template-areas: "bioimage bio" "job1 job2";
   grid-template-columns: repeat(2, 1fr); }
-
-.bio-img {
-  grid-area: bioimage;
-  margin: auto;
-  border-radius: 50%;
-  border: #eece1a 3px solid; }
-
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem; }
-
-.job1 {
-  grid-area: job1; }
-
-.job2 {
-  grid-area: job2; }
-
-.job {
-  background: #515151;
-  padding: 0.5rem;
-  border-bottom: #eece1a 5px solid; }
+  .about-info .bio-img {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job1 {
+    grid-area: job1; }
+  .about-info .job2 {
+    grid-area: job2; }
+  .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
 
 #main-footer {
   text-align: center;
